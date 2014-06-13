@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<welcome-file-list>
+		<welcome-file>appengine.jsp</welcome-file>
+	</welcome-file-list>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>FileUpload</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.FileUpload</servlet-class>
+ </servlet>
+ 
+ <servlet>
+    <servlet-name>ListAllFiles</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.ListAllFiles</servlet-class>
+ </servlet>
+     
+ <servlet>
+    <servlet-name>FileContent</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.FileContent</servlet-class>
+ </servlet>
+ 
+ <servlet>
+    <servlet-name>RemoveFile</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.RemoveFile</servlet-class>
+ </servlet>
+ 
+ <servlet>
+    <servlet-name>CheckIfFileExists</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.CheckIfFileExists</servlet-class>
+ </servlet>
+ 
+ <servlet>
+    <servlet-name>MemCacheUtilization</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.MemCacheUtilization</servlet-class>
+ </servlet>
+ 
+  <servlet>
+    <servlet-name>RemoveCache</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.RemoveCache</servlet-class>
+ </servlet>
+ 
+ <servlet>
+    <servlet-name>memCacheElements</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.memCacheElements</servlet-class>
+ </servlet>
+ 
+ <servlet>
+    <servlet-name>BlobStorageSize</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.BlobStorageSize</servlet-class>
+ </servlet>
+ 
+  <servlet>
+    <servlet-name>BlobStoreElements</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.BlobStoreElements</servlet-class>
+ </servlet>
+ 
+  <servlet>
+    <servlet-name>RemoveAll</servlet-name>
+  	<servlet-class>cs553.cc.CS553_GAE_ProgAssignment3.RemoveAll</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+    <servlet-name>FileUpload</servlet-name>
+    <url-pattern>/fileupload</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>ListAllFiles</servlet-name>
+    <url-pattern>/ListAllFiles</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>FileContent</servlet-name>
+    <url-pattern>/FileContent</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>RemoveFile</servlet-name>
+    <url-pattern>/RemoveFile</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>MemCacheUtilization</servlet-name>
+    <url-pattern>/MemCacheUtilization</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>CheckIfFileExists</servlet-name>
+    <url-pattern>/CheckIfFileExists</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>RemoveCache</servlet-name>
+    <url-pattern>/RemoveCache</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>memCacheElements</servlet-name>
+    <url-pattern>/memCacheElements</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>BlobStorageSize</servlet-name>
+    <url-pattern>/BlobStorageSize</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>BlobStoreElements</servlet-name>
+    <url-pattern>/BlobStoreElements</url-pattern>
+  </servlet-mapping>
+  
+ <servlet-mapping>
+    <servlet-name>RemoveAll</servlet-name>
+    <url-pattern>/RemoveAll</url-pattern>
+  </servlet-mapping>
+</web-app>
